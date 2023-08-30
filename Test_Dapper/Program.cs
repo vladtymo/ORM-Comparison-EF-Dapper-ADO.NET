@@ -72,8 +72,8 @@ namespace Test_Dapper
         {
             string connStr = ConfigurationManager.ConnectionStrings["CarDbModel"].ConnectionString;
 
-            Console.WriteLine("---------- ADO.NET ----------");
-            TestProvider(new CarRepositoryADO_NET(connStr));
+            Console.WriteLine("---------- DAPPER ----------");
+            TestProvider(new CarRepositoryDapper(connStr));
 
             Console.WriteLine("---------- ADO.NET ----------");
             TestProvider(new CarRepositoryADO_NET(connStr));
@@ -83,10 +83,6 @@ namespace Test_Dapper
 
             Console.WriteLine("---------- ENTITY FRAMEWORK SQL ----------");
             TestProvider(new CarRepositoryEF_SQL(connStr));
-
-            Console.WriteLine("---------- DAPPER ----------");
-            TestProvider(new CarRepositoryDapper(connStr));
-
         }
     }
 }

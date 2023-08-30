@@ -19,7 +19,6 @@ namespace Test_Dapper
         public CarRepositoryEF(string conn)
         {
             context = new CarDbModel(conn);
-
             context.Database.Log = Console.Write;
         }
 

@@ -1,3 +1,5 @@
+--create database CarSalon;
+
 USE [CarSalon]
 GO
 
@@ -8,7 +10,7 @@ GO
 --	Model nvarchar(100) not null,
 --	ModelYear int not null
 --)
-
+--go
 -- READ
 select COUNT(Id)
 from Cars
